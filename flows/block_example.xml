@@ -10,18 +10,18 @@
             <apply-actions>
                 <action>
                     <order>0</order>
-                    <drop-action>
+                    <drop-action/>
                 </action>
             </apply-actions>
         </instruction>
     </instructions>
     <match>
-   <ethernet-match>
+    <ethernet-match>
             <ethernet-type>
                 <type>2048</type>
             </ethernet-type>
    </ethernet-match> 
-   <ipv4-destination>192.168.30.6/36</ipv4-destination>
-   <ipv4-source>192.168.50.40/36</ipv4-source>
+   <ipv4-destination>192.168.30.6/32</ipv4-destination>
+   <ipv4-source>192.168.50.40/32</ipv4-source>
    </match>
 </flow>
