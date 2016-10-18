@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flow xmlns="urn:opendaylight:flow:inventory">
+    <flow-name>arp_rt-int-controller</flow-name>
+    <table_id>0</table_id>
+    <id>103</id>
+    <priority>200</priority>	
+    <instructions>
+        <instruction>
+            <order>0</order>
+            <apply-actions>
+                <action>
+                    <order>0</order>
+                    <output-action>
+                        <output-node-connector>9</output-node-connector>
+                        <max-length>200</max-length>
+                    </output-action>
+                </action>
+            </apply-actions>
+        </instruction>
+    </instructions>
+    <match>
+   <ethernet-match>
+            <ethernet-type>
+                <type>2054</type>
+            </ethernet-type>
+	    <ethernet-source>
+		<address>00:16:3e:00:01:35</address>
+	    </ethernet-source>		
+            <ethernet-destination>
+                <address>52:54:00:66:36:6c</address>
+            </ethernet-destination>	
+   </ethernet-match> 
+   <arp-source-transport-address>192.168.50.1/32</arp-source-transport-address>
+   <arp-target-transport-address>192.168.50.30/32</arp-target-transport-address>   
+  </match>
+</flow>

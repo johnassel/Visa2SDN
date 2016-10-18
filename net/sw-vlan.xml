@@ -1,0 +1,52 @@
+<network>
+	<name>sw-vlan</name>
+	<forward mode='bridge' />
+	<bridge name='sw-vlan' />
+	<virtualport type='openvswitch' />
+	<portgroup name='DATA-VLAN' default='yes'>
+		<vlan>
+			<tag id='10' />
+		</vlan>
+	</portgroup>
+        <portgroup name='VOIP-VLAN' >
+                <vlan>
+                        <tag id='20' />
+                </vlan>
+        </portgroup>
+        <portgroup name='AUTH-VLAN' >
+                <vlan>
+                        <tag id='30' />
+                </vlan>
+        </portgroup>
+        <portgroup name='MAIL-VLAN' >
+                <vlan>
+                        <tag id='40' />
+                </vlan>
+        </portgroup>
+        <portgroup name='ADMIN-VLAN' >
+                <vlan>
+                        <tag id='50' />
+                </vlan>
+        </portgroup>
+        <portgroup name='APP-VLAN' >
+                <vlan>
+                        <tag id='60' />
+                </vlan>
+        </portgroup>
+        <portgroup name='IDS-VLAN' >
+                <vlan>
+                        <tag id='70' />
+                </vlan>
+        </portgroup>
+	<portgroup name='RT-INT-TRUNK' >
+		<vlan trunk='yes'>
+			<tag id='10' />
+                        <tag id='20' />
+                        <tag id='30' />
+                        <tag id='40' />
+			<tag id='50' />
+                        <tag id='60' />
+			<tag id='70' />
+		</vlan>
+	</portgroup>
+</network>
